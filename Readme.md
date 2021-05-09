@@ -8,28 +8,46 @@ Kubernetes is a container-orchestration system for automating application deploy
 ### What is Vagrant?
 Vagrant is a tool for building and managing virtual machine environments.
 
-# Getting Started
+# Installation
 Vagrant needs a virtual machine provider. In this project we are using VirtualBox.
 
 Install VBox and Vagrant CLI:
 * [VirtualBox](https://www.virtualbox.org/)
 * [Vagrant](https://www.vagrantup.com/)
 
-## Bringing up the Cluster
+# Getting Started
+This kubernates cluster hast a one Master Node `kmaster` and two Worker Nodes `kworker1` and `kworker2`.
+
+### Bringing up the Cluster
 
     vagrant up
 
-## Checking the Status
+### Checking the Status
 
     vagrant status
 
-## Logging to the master Node 
+### Logging to the master Node 
 
     vagrant ssh kmaster
 
-# Explanation
+### How to change the number of workers
+1) go to the `Vagrantfile` (line 21) and increase the `NodeCount` value.
+```ruby
+   NodeCount = 3
+```
+2) go to `bootstrap.sh` shell script and scroll to `# Update hosts file` section (line 42) and add the folowing new line for the `kworker3`.
+```sh
+   # Update hosts file
+    echo "[TASK 5] Update /etc/hosts file"
+    cat >>/etc/hosts<<EOF
+    200.1.1.100 kmaster.example.com kmaster
+    200.1.1.101 kworker1.example.com kworker1
+    200.1.1.102 kworker2.example.com kworker2
+    200.1.1.103 kworker3.example.com kworker3 
+    EOF
+```
 
-## Vagrantfile
+# Vagrantfile Explanation
 
 ### Env Variables
 Vagrant has a set of environmental variables that can be used to configure and control it in a global way. and setting `VAGRANT_NO_PARALLEL` means that it will not perform any parallel operations (parallel box provisioning)
