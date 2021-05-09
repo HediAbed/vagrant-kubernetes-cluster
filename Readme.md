@@ -88,7 +88,7 @@ The VirtualBox provider exposes some configuration options that allow you to mor
 ```ruby
 config.vm.define "mydebian" do |mydebian|
   # ...
-  kmaster.vm.provider "virtualbox" do |v|
+  mydebian.vm.provider "virtualbox" do |v|
   v.name = "mydebian"
   v.memory = 2048
   v.cpus = 2
