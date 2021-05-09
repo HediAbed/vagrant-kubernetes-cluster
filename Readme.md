@@ -1,6 +1,8 @@
 # About The Project
 Every developer wants to have his own local cluster instance running to play around with it. Therefore, this Vagrant project is for building a k8s cluster environment in VirtualBox with Ubuntu VMs.
 
+![CMD Image](img/starting-cluster.png)
+
 ### What is docker?
 Docker is a tool designed to make it easier to create, deploy, and run applications by using containers.
 ### What is k8s?
@@ -51,6 +53,8 @@ This kubernates cluster hast a one Master Node `kmaster` and two Worker Nodes `k
     EOF
 ```
 3) Save all and run `vagrant up` cli
+
+![kworker3 added image](img/added-kworker3.png)
 
 # Vagrantfile Explanation
 
