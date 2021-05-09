@@ -39,7 +39,7 @@ ENV['VAGRANT_NO_PARALLEL'] = 'yes'
 ```
 
 ### Init
-If you run `vagrant init`, the cli generate a Vagrantfile with the following example. The "2" in the first line below represents the version of the configuration object config.
+If you run `vagrant init`, the cli generate a Vagrantfile with the following example. And The "2" in the first line of the example below represents the version of the configuration object `config`.
 
 ```ruby
 Vagrant.configure("2") do |config|
