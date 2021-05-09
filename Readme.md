@@ -6,6 +6,6 @@
 
     vagrant status
 
-# Logging to the master Node 
+## Logging to the master Node 
 
     vagrant ssh kmaster
