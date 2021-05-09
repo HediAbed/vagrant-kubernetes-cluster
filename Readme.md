@@ -30,6 +30,10 @@ This kubernates cluster hast a one Master Node `kmaster` and two Worker Nodes `k
 
     vagrant ssh kmaster
 
+### Bringing down the Cluster
+
+    vagrant halt --force
+
 ### How to change the number of workers
 1) go to the `Vagrantfile` (line 21) and increase the `NodeCount` value.
 ```ruby
@@ -46,6 +50,7 @@ This kubernates cluster hast a one Master Node `kmaster` and two Worker Nodes `k
     200.1.1.103 kworker3.example.com kworker3 
     EOF
 ```
+3) Save all and run `vagrant up` cli
 
 # Vagrantfile Explanation
 
