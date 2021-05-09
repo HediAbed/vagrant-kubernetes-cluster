@@ -30,4 +30,4 @@ Install VBox and Vagrant CLI:
     vagrant ssh kmaster
 
 # Resources
-This is the link of the tutorial that I followed: [Tutorial](https://www.exxactcorp.com/blog/HPC/building-a-kubernetes-cluster-using-vagrant)
+This is the link of the original tutorial: [Tutorial](https://www.exxactcorp.com/blog/HPC/building-a-kubernetes-cluster-using-vagrant)
